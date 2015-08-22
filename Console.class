@@ -55,6 +55,15 @@ public class Console implements KeyListener{
 	      System.out.println("Oops");
 	    }
   }
+  public static boolean hasNextString(){
+	  String text = input.getText();
+	    String[] lines = text.split("\n");
+	    String lastLine = lines[lines.length-1];
+	  if(lastLine!=""){
+		  return true;
+	  }
+	  return false;
+  }
   public static String checkInput(){
 	  final CountDownLatch latch = new CountDownLatch(1);
 	    KeyEventDispatcher dispatcher = new KeyEventDispatcher() {
